@@ -43,6 +43,14 @@
 
 仓库不提供可直接安装的发布包，需要自行构建。环境变量、ohpm registry 与常见构建报错见 [docs/build-guide.md](docs/build-guide.md)。
 
+## 贡献者
+
+感谢以下贡献者对本项目的支持：
+
+| <img src="https://images.weserv.nl/?url=github.com/Groupguanfang.png&mask=circle&w=200&h=200" width="100" alt="Zero 的头像" /><br />[**Zero**](https://github.com/Groupguanfang) | <img src="https://images.weserv.nl/?url=github.com/zero-git-robot.png&mask=circle&w=200&h=200" width="100" alt="Zero's bot 的头像" /><br />[**Zero's bot**](https://github.com/zero-git-robot) |
+| :---: | :---: |
+| Web前端与Node.js后端开发者，技术向 & 二次元。 | Zero 的机器人账号，协助打理 GitHub 仓库日常事务。 |
+
 ## 免责声明
 
 - 本项目不提供任何内容，也不对第三方接口的可用性与准确性作任何保证。

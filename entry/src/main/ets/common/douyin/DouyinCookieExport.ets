@@ -9,6 +9,8 @@
  * 这里绝不打印任何 value。域外 Cookie 在解析阶段丢弃，只保留抖音及其静态资源域。
  */
 
+import { DecodeContext, JsonNode } from '../jsonschema/JsonDecode';
+
 export interface ExportedCookie {
   domain: string;
   name: string;
@@ -21,16 +23,6 @@ export interface ParsedCookieExport {
   invalid: number;
   format: string;
   error: string;
-}
-
-interface CookieJsonItem {
-  domain?: string;
-  name?: string;
-  value?: string;
-}
-
-interface CookieJsonEnvelope {
-  cookies?: CookieJsonItem[];
 }
 
 const BOM: string = '\uFEFF';
@@ -225,34 +217,45 @@ export class DouyinCookieExport {
   }
 
   private static parseJson(source: string): ParsedCookieExport {
-    let items: CookieJsonItem[] = [];
-    try {
-      const parsed: Object = JSON.parse(source);
-      if (Array.isArray(parsed)) {
-        items = parsed as CookieJsonItem[];
-      } else {
-        const envelope = parsed as CookieJsonEnvelope;
-        if (envelope.cookies === undefined || !Array.isArray(envelope.cookies)) {
-          return { cookies: [], outOfScope: 0, invalid: 0, format: 'json', error: 'json-shape' };
-        }
-        items = envelope.cookies;
-      }
-    } catch (_) {
+    // 动态 JSON 访问只走 JsonNode 这一处共享边界；这里只做形状分流，绝不把解析结果直接
+    // 断言成业务模型（与 *.generated.ets 里的 decoder 同一套约束）。
+    const context = new DecodeContext('DouyinCookieExport');
+    const node = JsonNode.parse(source, context);
+    if (node === undefined) {
       return { cookies: [], outOfScope: 0, invalid: 0, format: 'json', error: 'json-parse' };
+    }
+    // items 先初始化为 node，保证所有存活路径都已赋值（ArkTS 不做可选链前的非空断言）。
+    let items: JsonNode = node;
+    if (node.kind() === 'object') {
+      const envelope = node.field('cookies');
+      if (envelope.kind() !== 'array') {
+        return { cookies: [], outOfScope: 0, invalid: 0, format: 'json', error: 'json-shape' };
+      }
+      items = envelope;
+    } else if (node.kind() !== 'array') {
+      // 保持旧行为：非数组顶层被当作 envelope 读 .cookies，字符串/数字/布尔取到 undefined
+      // 记 json-shape；而 JSON 'null' 读属性会抛 TypeError、被旧的 catch 归为 json-parse。
+      return {
+        cookies: [], outOfScope: 0, invalid: 0, format: 'json',
+        error: node.kind() === 'null' ? 'json-parse' : 'json-shape'
+      };
     }
 
     const cookies: ExportedCookie[] = [];
     let outOfScope = 0;
     let invalid = 0;
-    for (const item of items) {
-      const rawDomain = item.domain;
-      const name = item.name;
-      const value = item.value;
-      if (typeof rawDomain !== 'string' || typeof name !== 'string' || typeof value !== 'string') {
+    for (let index = 0; index < items.length(); index++) {
+      const item = items.element(index);
+      const domainNode = item.field('domain');
+      const nameNode = item.field('name');
+      const valueNode = item.field('value');
+      if (domainNode.kind() !== 'string' || nameNode.kind() !== 'string' || valueNode.kind() !== 'string') {
         invalid++;
         continue;
       }
-      const domain = DouyinCookieExport.normalizeDomain(rawDomain);
+      const name = nameNode.stringValue();
+      const value = valueNode.stringValue();
+      const domain = DouyinCookieExport.normalizeDomain(domainNode.stringValue());
       if (domain.length === 0 || name.length === 0 || name.length > MAX_NAME_LENGTH ||
         value.length > MAX_VALUE_LENGTH || DouyinCookieExport.hasControl(name) ||
         DouyinCookieExport.hasControl(value)) {

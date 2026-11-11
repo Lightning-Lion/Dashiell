@@ -1,0 +1,74 @@
+name: CI
+
+# HarmonyOS 应用本身不在这里构建（HAP assemble 需要 DevEco Studio SDK，GitHub 托管
+# runner 没有）。这里只跑仓库里与 SDK 无关、可在标准 runner 上复现的校验：日志生成物、
+# JSON schema 生成物与边界守卫（Node），以及 json-gen 生成器（Rust）。
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  node-checks:
+    name: Node · 日志生成物 / JSON schema 校验
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          # 脚本用到 import.meta.dirname（Node 20.11+），固定到 LTS。
+          node-version: '22'
+
+      - name: 日志事件生成物是否过期
+        run: node tools/log-gen/cli.mjs --check --app Dashiell
+
+      - name: 日志生成器单元测试
+        run: node --test tools/log-gen/test/generator.test.mjs
+
+      - name: JSON schema 生成物是否过期（Node 快检）
+        run: node scripts/check-jsonschema-fresh.mjs
+
+      - name: 生产 JSON.parse 边界守卫
+        run: node scripts/audit-json-boundaries.mjs
+
+  rust-checks:
+    name: Rust · json-gen 生成器
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Rust 工具链（含 clippy）
+        # json-gen 用 edition 2024，需要 stable >= 1.85；@stable 始终取最新稳定版。
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - name: 缓存 cargo 依赖与构建产物
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            tools/json-gen/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('tools/json-gen/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: cargo test
+        run: cargo test --locked --manifest-path tools/json-gen/Cargo.toml
+
+      - name: cargo clippy
+        run: cargo clippy --locked --manifest-path tools/json-gen/Cargo.toml --all-targets -- -D warnings
+
+      - name: ArkTS schema 生成物是否过期（Rust 完整 --check）
+        run: node scripts/generate-jsonschema.mjs --check

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "name": "Local",
+  "roots": {
+    "RSSSourceIds": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "ScriptString": { "type": "string", "nullable": true },
+    "ScriptNumber": { "type": "number", "nullable": true },
+    "ScriptBoolean": { "type": "boolean", "nullable": true }
+  }
+}

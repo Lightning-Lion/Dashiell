@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "name": "Douyin",
+  "models": {
+    "ApiStatus": {
+      "type": "object",
+      "required": [
+        "status_code"
+      ],
+      "properties": {
+        "status_code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true,
+          "outputName": "statusCode"
+        }
+      }
+    },
+    "PlayAddress": {
+      "type": "object",
+      "required": [
+        "url_list"
+      ],
+      "properties": {
+        "url_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "outputName": "urls"
+        }
+      }
+    },
+    "VideoInfo": {
+      "type": "object",
+      "properties": {
+        "play_addr_h264": {
+          "ref": "PlayAddress",
+          "nullable": true,
+          "outputName": "h264"
+        },
+        "play_addr": {
+          "ref": "PlayAddress",
+          "nullable": true,
+          "outputName": "standard"
+        },
+        "play_addr_lowbr": {
+          "ref": "PlayAddress",
+          "nullable": true,
+          "outputName": "lowBitrate"
+        },
+        "play_addr_265": {
+          "ref": "PlayAddress",
+          "nullable": true,
+          "outputName": "hevc"
+        }
+      }
+    },
+    "AwemeItem": {
+      "type": "object",
+      "required": [
+        "aweme_id"
+      ],
+      "properties": {
+        "aweme_id": {
+          "type": "string",
+          "minLength": 1,
+          "outputName": "id"
+        },
+        "preview_title": {
+          "type": "string",
+          "outputName": "previewTitle"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "video": {
+          "ref": "VideoInfo",
+          "nullable": true
+        }
+      }
+    },
+    "FeedResponse": {
+      "type": "object",
+      "required": [
+        "status_code",
+        "aweme_list"
+      ],
+      "properties": {
+        "status_code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true,
+          "outputName": "statusCode"
+        },
+        "aweme_list": {
+          "type": "array",
+          "items": {
+            "ref": "AwemeItem"
+          },
+          "outputName": "items"
+        },
+        "cursor": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "integer": true,
+          "safeInteger": true
+        },
+        "max_cursor": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "integer": true,
+          "safeInteger": true,
+          "outputName": "maxCursor"
+        },
+        "has_more": {
+          "type": [
+            "number",
+            "boolean"
+          ],
+          "integer": true,
+          "outputName": "hasMore"
+        }
+      }
+    },
+    "DetailResponse": {
+      "type": "object",
+      "required": [
+        "status_code",
+        "aweme_detail"
+      ],
+      "properties": {
+        "status_code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true,
+          "outputName": "statusCode"
+        },
+        "aweme_detail": {
+          "ref": "AwemeItem",
+          "outputName": "item"
+        }
+      }
+    },
+    "WebFeedResponse": {
+      "type": "object",
+      "required": [
+        "aweme_list"
+      ],
+      "properties": {
+        "status_code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true,
+          "outputName": "statusCode"
+        },
+        "aweme_list": {
+          "type": "array",
+          "items": {
+            "ref": "AwemeItem"
+          },
+          "outputName": "items"
+        }
+      }
+    },
+    "SelfUser": {
+      "type": "object",
+      "required": [
+        "sec_uid"
+      ],
+      "properties": {
+        "sec_uid": {
+          "type": "string",
+          "minLength": 1,
+          "outputName": "secUid"
+        },
+        "nickname": {
+          "type": "string"
+        }
+      }
+    },
+    "SelfProfileResponse": {
+      "type": "object",
+      "required": [
+        "status_code",
+        "user"
+      ],
+      "properties": {
+        "status_code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true,
+          "outputName": "statusCode"
+        },
+        "user": {
+          "ref": "SelfUser"
+        }
+      }
+    }
+  }
+}

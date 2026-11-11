@@ -1,0 +1,2788 @@
+[
+  {
+    "name": "webFeedSuccess",
+    "endpoint": "webFeed",
+    "input": {
+      "aweme_list": [
+        {
+          "aweme_id": "1",
+          "video": {
+            "play_addr": {
+              "url_list": [
+                "https://example.com/v"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "ok": true
+  },
+  {
+    "name": "wbiSuccess",
+    "endpoint": "wbi",
+    "input": {
+      "code": 0,
+      "data": {
+        "wbi_img": {
+          "img_url": "https://example.com/a.png",
+          "sub_url": "https://example.com/b.png"
+        }
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "upVideosSuccess",
+    "endpoint": "upVideos",
+    "input": {
+      "code": 0,
+      "data": {
+        "list": {
+          "vlist": [
+            {
+              "aid": 1,
+              "bvid": "BV1",
+              "title": "t",
+              "pic": "p",
+              "author": "a"
+            }
+          ]
+        }
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "favFoldersSuccess",
+    "endpoint": "favFolders",
+    "input": {
+      "code": 0,
+      "data": {
+        "count": 1,
+        "list": [
+          {
+            "id": 1,
+            "title": "test",
+            "attr": 0,
+            "media_count": 1
+          }
+        ]
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "favContentsSuccess",
+    "endpoint": "favContents",
+    "input": {
+      "code": 0,
+      "data": {
+        "info": {
+          "id": 1,
+          "title": "test",
+          "attr": 0,
+          "media_count": 1
+        },
+        "medias": [
+          {
+            "id": 2,
+            "type": 2,
+            "title": "test",
+            "cover": "https://example.com/c",
+            "attr": 0,
+            "duration": 60,
+            "bvid": "BVtest",
+            "upper": {
+              "name": "u"
+            },
+            "cnt_info": {
+              "play": 3
+            }
+          }
+        ],
+        "has_more": false
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "favFolderSuccess",
+    "endpoint": "favFolder",
+    "input": {
+      "code": 0,
+      "data": {
+        "id": 1,
+        "title": "test",
+        "attr": 0,
+        "media_count": 1
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "favoriteStateSuccess",
+    "endpoint": "favoriteState",
+    "input": {
+      "code": 0,
+      "data": {
+        "favoured": true
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "historySuccess",
+    "endpoint": "history",
+    "input": {
+      "code": 0,
+      "data": {
+        "cursor": {
+          "max": 1,
+          "view_at": 2
+        },
+        "tab": [
+          {
+            "type": "archive",
+            "name": "video"
+          }
+        ],
+        "list": [
+          {
+            "title": "a",
+            "history": {
+              "bvid": "BV1",
+              "cid": 1
+            },
+            "progress": -1
+          }
+        ]
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "midSuccess",
+    "endpoint": "mid",
+    "input": {
+      "code": 0,
+      "data": {
+        "mid": 123
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "actionSuccess",
+    "endpoint": "action",
+    "input": {
+      "code": 0,
+      "message": "0"
+    },
+    "ok": true
+  },
+  {
+    "name": "likeStateSuccess",
+    "endpoint": "likeState",
+    "input": {
+      "code": 0,
+      "data": 1
+    },
+    "ok": true
+  },
+  {
+    "name": "coinStateSuccess",
+    "endpoint": "coinState",
+    "input": {
+      "code": 0,
+      "data": {
+        "multiply": 2
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "insertCoinSuccess",
+    "endpoint": "insertCoin",
+    "input": {
+      "code": 0,
+      "data": {
+        "like": false
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "userStatSuccess",
+    "endpoint": "userStat",
+    "input": {
+      "code": 0,
+      "data": {
+        "following": 1,
+        "follower": 2,
+        "dynamic_count": 3
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "userCardSuccess",
+    "endpoint": "userCard",
+    "input": {
+      "code": 0,
+      "data": {
+        "card": {
+          "following": 1,
+          "follower": 2
+        },
+        "following": false,
+        "follower": 2
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "userCoinSuccess",
+    "endpoint": "userCoin",
+    "input": {
+      "code": 0,
+      "data": {
+        "money": 3.5
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "followingSuccess",
+    "endpoint": "following",
+    "input": {
+      "code": 0,
+      "data": {
+        "list": [
+          {
+            "mid": 1,
+            "uname": "u"
+          }
+        ],
+        "total": 1
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "webNestedURL",
+    "endpoint": "webFeed",
+    "input": {
+      "aweme_list": [
+        {
+          "aweme_id": "1",
+          "video": {
+            "play_addr": {
+              "url_list": [
+                3
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.aweme_list[0].video.play_addr.url_list[0]"
+  },
+  {
+    "name": "webBusinessFailureFirst",
+    "endpoint": "webFeed",
+    "input": {
+      "status_code": 8
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.status_code"
+  },
+  {
+    "name": "webValidLegacyCache",
+    "endpoint": "webFeed",
+    "input": {
+      "aweme_list": []
+    },
+    "ok": true
+  },
+  {
+    "name": "guestWbiKeysNotLoginVerdict",
+    "endpoint": "wbi",
+    "input": {
+      "code": -101,
+      "data": {
+        "wbi_img": {
+          "img_url": "https://example.com/a.png",
+          "sub_url": "https://example.com/b.png"
+        }
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "wbiWrongNestedURL",
+    "endpoint": "wbi",
+    "input": {
+      "code": 0,
+      "data": {
+        "wbi_img": {
+          "img_url": 42,
+          "sub_url": "https://example.com/b.png"
+        }
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.wbi_img.img_url"
+  },
+  {
+    "name": "wbiMissingNestedURL",
+    "endpoint": "wbi",
+    "input": {
+      "code": 0,
+      "data": {
+        "wbi_img": {
+          "img_url": "https://example.com/a.png"
+        }
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.wbi_img.sub_url"
+  },
+  {
+    "name": "wbiNullObject",
+    "endpoint": "wbi",
+    "input": {
+      "code": 0,
+      "data": {
+        "wbi_img": null
+      }
+    },
+    "ok": false,
+    "code": "NULL_NOT_ALLOWED",
+    "path": "$.data.wbi_img"
+  },
+  {
+    "name": "upVideoWrongAid",
+    "endpoint": "upVideos",
+    "input": {
+      "code": 0,
+      "data": {
+        "list": {
+          "vlist": [
+            {
+              "aid": "1",
+              "bvid": "BV1",
+              "title": "t",
+              "pic": "p",
+              "author": "a"
+            }
+          ]
+        }
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.list.vlist[0].aid"
+  },
+  {
+    "name": "upVideoWrongList",
+    "endpoint": "upVideos",
+    "input": {
+      "code": 0,
+      "data": {
+        "list": {
+          "vlist": {}
+        }
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.list.vlist"
+  },
+  {
+    "name": "upEmptyPage",
+    "endpoint": "upVideos",
+    "input": {
+      "code": 0,
+      "data": {
+        "list": {
+          "vlist": []
+        }
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "upBusinessFailure",
+    "endpoint": "upVideos",
+    "input": {
+      "code": -403
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "missingCode",
+    "endpoint": "upVideos",
+    "input": {
+      "data": {}
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.code"
+  },
+  {
+    "name": "folderWrongId",
+    "endpoint": "favFolders",
+    "input": {
+      "code": 0,
+      "data": {
+        "count": 1,
+        "list": [
+          {
+            "id": "1",
+            "title": "test",
+            "attr": 0,
+            "media_count": 1
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.list[0].id"
+  },
+  {
+    "name": "folderWrongList",
+    "endpoint": "favFolders",
+    "input": {
+      "code": 0,
+      "data": {
+        "count": 1,
+        "list": {}
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.list"
+  },
+  {
+    "name": "folderNullEmpty",
+    "endpoint": "favFolders",
+    "input": {
+      "code": 0,
+      "data": {
+        "count": 0,
+        "list": null
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "folderAbsentData",
+    "endpoint": "favFolders",
+    "input": {
+      "code": 0
+    },
+    "ok": true
+  },
+  {
+    "name": "mediaWrongAuthor",
+    "endpoint": "favContents",
+    "input": {
+      "code": 0,
+      "data": {
+        "info": {
+          "id": 1,
+          "title": "test",
+          "attr": 0,
+          "media_count": 1
+        },
+        "medias": [
+          {
+            "id": 2,
+            "type": 2,
+            "title": "test",
+            "cover": "https://example.com/c",
+            "attr": 0,
+            "duration": 60,
+            "bvid": "BVtest",
+            "upper": {
+              "name": 3
+            },
+            "cnt_info": {
+              "play": 3
+            }
+          }
+        ],
+        "has_more": false
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.medias[0].upper.name"
+  },
+  {
+    "name": "mediaWrongCount",
+    "endpoint": "favContents",
+    "input": {
+      "code": 0,
+      "data": {
+        "info": {
+          "id": 1,
+          "title": "test",
+          "attr": 0,
+          "media_count": 1
+        },
+        "medias": [
+          {
+            "id": 2,
+            "type": 2,
+            "title": "test",
+            "cover": "https://example.com/c",
+            "attr": 0,
+            "duration": 60,
+            "bvid": "BVtest",
+            "upper": {
+              "name": "u"
+            },
+            "cnt_info": {
+              "play": "3"
+            }
+          }
+        ],
+        "has_more": false
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.medias[0].cnt_info.play"
+  },
+  {
+    "name": "mediaWrongFlag",
+    "endpoint": "favContents",
+    "input": {
+      "code": 0,
+      "data": {
+        "info": {
+          "id": 1,
+          "title": "test",
+          "attr": 0,
+          "media_count": 1
+        },
+        "medias": [
+          {
+            "id": 2,
+            "type": 2,
+            "title": "test",
+            "cover": "https://example.com/c",
+            "attr": 0,
+            "duration": 60,
+            "bvid": "BVtest",
+            "upper": {
+              "name": "u"
+            },
+            "cnt_info": {
+              "play": 3
+            }
+          }
+        ],
+        "has_more": 0
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.has_more"
+  },
+  {
+    "name": "mediaNullEmpty",
+    "endpoint": "favContents",
+    "input": {
+      "code": 0,
+      "data": {
+        "info": {
+          "id": 1,
+          "title": "test",
+          "attr": 0,
+          "media_count": 1
+        },
+        "medias": null,
+        "has_more": false
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "infoWrongTitle",
+    "endpoint": "favFolder",
+    "input": {
+      "code": 0,
+      "data": {
+        "id": 1,
+        "title": 3,
+        "attr": 0,
+        "media_count": 1
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.title"
+  },
+  {
+    "name": "favoriteWrongState",
+    "endpoint": "favoriteState",
+    "input": {
+      "code": 0,
+      "data": {
+        "favoured": 1
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.favoured"
+  },
+  {
+    "name": "historyDeepWrongCid",
+    "endpoint": "history",
+    "input": {
+      "code": 0,
+      "data": {
+        "cursor": {
+          "max": 1,
+          "view_at": 2
+        },
+        "tab": [
+          {
+            "type": "archive",
+            "name": "video"
+          }
+        ],
+        "list": [
+          {
+            "title": "a",
+            "history": {
+              "bvid": "BV1",
+              "cid": "1"
+            },
+            "progress": -1
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.list[0].history.cid"
+  },
+  {
+    "name": "historyWrongTab",
+    "endpoint": "history",
+    "input": {
+      "code": 0,
+      "data": {
+        "cursor": {
+          "max": 1,
+          "view_at": 2
+        },
+        "tab": {},
+        "list": [
+          {
+            "title": "a",
+            "history": {
+              "bvid": "BV1",
+              "cid": 1
+            },
+            "progress": -1
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.tab"
+  },
+  {
+    "name": "historyUnsafeCursor",
+    "endpoint": "history",
+    "input": {
+      "code": 0,
+      "data": {
+        "cursor": {
+          "max": 9007199254740992,
+          "view_at": 2
+        },
+        "tab": [
+          {
+            "type": "archive",
+            "name": "video"
+          }
+        ],
+        "list": [
+          {
+            "title": "a",
+            "history": {
+              "bvid": "BV1",
+              "cid": 1
+            },
+            "progress": -1
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "OUT_OF_RANGE",
+    "path": "$.data.cursor.max"
+  },
+  {
+    "name": "historyNullData",
+    "endpoint": "history",
+    "input": {
+      "code": 0,
+      "data": null
+    },
+    "ok": true
+  },
+  {
+    "name": "midWrongType",
+    "endpoint": "mid",
+    "input": {
+      "code": 0,
+      "data": {
+        "mid": "123"
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.mid"
+  },
+  {
+    "name": "likeWrongType",
+    "endpoint": "likeState",
+    "input": {
+      "code": 0,
+      "data": true
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data"
+  },
+  {
+    "name": "coinWrongType",
+    "endpoint": "coinState",
+    "input": {
+      "code": 0,
+      "data": {
+        "multiply": "2"
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.multiply"
+  },
+  {
+    "name": "insertWrongType",
+    "endpoint": "insertCoin",
+    "input": {
+      "code": 0,
+      "data": {
+        "like": 1
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.like"
+  },
+  {
+    "name": "mutationBusinessFailure",
+    "endpoint": "insertCoin",
+    "input": {
+      "code": -101
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "statWrongFollower",
+    "endpoint": "userStat",
+    "input": {
+      "code": 0,
+      "data": {
+        "following": 1,
+        "follower": "2",
+        "dynamic_count": 3
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.follower"
+  },
+  {
+    "name": "cardWrongNested",
+    "endpoint": "userCard",
+    "input": {
+      "code": 0,
+      "data": {
+        "card": {
+          "following": false,
+          "follower": 2
+        },
+        "following": false,
+        "follower": 2
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.card.following"
+  },
+  {
+    "name": "coinWrongMoney",
+    "endpoint": "userCoin",
+    "input": {
+      "code": 0,
+      "data": {
+        "money": "3.5"
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.money"
+  },
+  {
+    "name": "followingWrongUid",
+    "endpoint": "following",
+    "input": {
+      "code": 0,
+      "data": {
+        "list": [
+          {
+            "mid": "1",
+            "uname": "u"
+          }
+        ],
+        "total": 1
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.list[0].mid"
+  },
+  {
+    "name": "followingWrongArray",
+    "endpoint": "following",
+    "input": {
+      "code": 0,
+      "data": {
+        "list": {},
+        "total": 1
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.list"
+  },
+  {
+    "name": "sessionLoggedIn",
+    "endpoint": "session",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": true
+      }
+    },
+    "ok": true,
+    "value": true
+  },
+  {
+    "name": "sessionExpired",
+    "endpoint": "session",
+    "input": {
+      "code": -101
+    },
+    "ok": true,
+    "value": false
+  },
+  {
+    "name": "sessionLoggedOut",
+    "endpoint": "session",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": false
+      }
+    },
+    "ok": true,
+    "value": false
+  },
+  {
+    "name": "sessionRiskNotLogout",
+    "endpoint": "session",
+    "input": {
+      "code": -412
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "sessionMalformedNotLogout",
+    "endpoint": "session",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": "false"
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.isLogin"
+  },
+  {
+    "name": "rssStrings",
+    "endpoint": "rss",
+    "input": [
+      "a",
+      "b"
+    ],
+    "ok": true
+  },
+  {
+    "name": "rssEmpty",
+    "endpoint": "rss",
+    "input": [],
+    "ok": true
+  },
+  {
+    "name": "rssObject",
+    "endpoint": "rss",
+    "input": {},
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$"
+  },
+  {
+    "name": "rssBadStringItem",
+    "endpoint": "rss",
+    "input": [
+      "a",
+      3
+    ],
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$[1]"
+  },
+  {
+    "name": "rssNullItem",
+    "endpoint": "rss",
+    "input": [
+      "a",
+      null
+    ],
+    "ok": false,
+    "code": "NULL_NOT_ALLOWED",
+    "path": "$[1]"
+  },
+  {
+    "name": "rssEmptyId",
+    "endpoint": "rss",
+    "input": [
+      ""
+    ],
+    "ok": false,
+    "code": "OUT_OF_RANGE",
+    "path": "$[0]"
+  },
+  {
+    "name": "scriptStringValue",
+    "endpoint": "scriptString",
+    "input": "hello\n\"世界\"",
+    "ok": true,
+    "value": "hello\n\"世界\""
+  },
+  {
+    "name": "scriptStringNull",
+    "endpoint": "scriptString",
+    "input": null,
+    "ok": true,
+    "value": null
+  },
+  {
+    "name": "scriptBooleanValue",
+    "endpoint": "scriptBoolean",
+    "input": false,
+    "ok": true,
+    "value": false
+  },
+  {
+    "name": "scriptBooleanNull",
+    "endpoint": "scriptBoolean",
+    "input": null,
+    "ok": true,
+    "value": null
+  },
+  {
+    "name": "scriptNumberValue",
+    "endpoint": "scriptNumber",
+    "input": 2.5,
+    "ok": true,
+    "value": 2.5
+  },
+  {
+    "name": "scriptNumberNull",
+    "endpoint": "scriptNumber",
+    "input": null,
+    "ok": true,
+    "value": null
+  },
+  {
+    "name": "scriptStringDoesNotStripNumber",
+    "endpoint": "scriptString",
+    "input": 123,
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$"
+  },
+  {
+    "name": "scriptBooleanDoesNotCoerceString",
+    "endpoint": "scriptBoolean",
+    "input": "false",
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$"
+  },
+  {
+    "name": "scriptNumberDoesNotCoerceString",
+    "endpoint": "scriptNumber",
+    "input": "5",
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$"
+  },
+  {
+    "name": "scriptNumberRejectsEmpty",
+    "endpoint": "scriptNumber",
+    "input": null,
+    "ok": false,
+    "code": "INVALID_JSON",
+    "path": "$",
+    "text": ""
+  },
+  {
+    "name": "scriptNumberRejectsNonFinite",
+    "endpoint": "scriptNumber",
+    "input": null,
+    "ok": false,
+    "code": "OUT_OF_RANGE",
+    "path": "$",
+    "text": "1e999"
+  },
+  {
+    "name": "badJSON",
+    "endpoint": "favFolders",
+    "input": null,
+    "ok": false,
+    "code": "INVALID_JSON",
+    "path": "$",
+    "text": "<html>login required</html>"
+  },
+  {
+    "name": "homeCoreSuccess",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "cid": 2,
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "videoSearchCoreSuccess",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "result": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "title": "<em>title</em>",
+            "author": "owner",
+            "duration": "1:23",
+            "play": 1
+          }
+        ],
+        "numResults": 1,
+        "page": 1
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "cidCoreSuccess",
+    "endpoint": "cid",
+    "input": {
+      "code": 0,
+      "data": {
+        "cid": 2,
+        "bvid": "BV1"
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "videoDetailCoreSuccess",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BV1",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": {
+            "name": "owner",
+            "face": "https://example.com/face"
+          },
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": 3,
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": [
+          {
+            "title": "related",
+            "bvid": "BV2",
+            "pic": "pic",
+            "duration": 30,
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 9
+            }
+          }
+        ]
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "playbackCoreSuccess",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          {
+            "url": "https://example.com/main",
+            "backup_url": [
+              "https://example.com/backup"
+            ]
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "navCoreSuccess",
+    "endpoint": "nav",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": true,
+        "mid": 1,
+        "uname": "u",
+        "face": "https://example.com/a",
+        "money": 3.5,
+        "wallet": {
+          "bcoin_balance": 2.5
+        },
+        "level_info": {
+          "current_level": 3,
+          "current_exp": 123,
+          "next_exp": "--"
+        }
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "homeBusinessErrorBeforePayload",
+    "endpoint": "home",
+    "input": {
+      "code": -403
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "videoSearchBusinessErrorBeforePayload",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": -403
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "cidBusinessErrorBeforePayload",
+    "endpoint": "cid",
+    "input": {
+      "code": -403
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "videoDetailBusinessErrorBeforePayload",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": -403
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "playbackBusinessErrorBeforePayload",
+    "endpoint": "playback",
+    "input": {
+      "code": -403
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "navBusinessErrorBeforePayload",
+    "endpoint": "nav",
+    "input": {
+      "code": -403
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "homeEmptyPage",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": []
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "homeMissingArray",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {}
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.item"
+  },
+  {
+    "name": "homeArrayWrongType",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": {}
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.item"
+  },
+  {
+    "name": "homeObjectArrayItemWrong",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          [],
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.item[0]"
+  },
+  {
+    "name": "homeUnsafeNumericId",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 9007199254740992,
+            "bvid": "BV1",
+            "cid": 2,
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "OUT_OF_RANGE",
+    "path": "$.data.item[0].id"
+  },
+  {
+    "name": "homeMissingVideoBvid",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "cid": 2,
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.item[0].bvid"
+  },
+  {
+    "name": "homeEmptyVideoBvid",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "bvid": "",
+            "cid": 2,
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "INVALID_VALUE",
+    "path": "$.data.item[0].bvid"
+  },
+  {
+    "name": "homeMissingVideoCid",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.item[0].cid"
+  },
+  {
+    "name": "homeInvalidCidValue",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "cid": "abc",
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "INVALID_VALUE",
+    "path": "$.data.item[0].cid"
+  },
+  {
+    "name": "homeNestedWrongCount",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "cid": 2,
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": "1",
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.item[0].stat.view"
+  },
+  {
+    "name": "homeNestedWrongName",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "cid": 2,
+            "title": "title",
+            "owner": {
+              "name": 3,
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.item[0].owner.name"
+  },
+  {
+    "name": "homeNestedEmptyName",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "cid": 2,
+            "title": "title",
+            "owner": {
+              "name": "",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "INVALID_VALUE",
+    "path": "$.data.item[0].owner.name"
+  },
+  {
+    "name": "homePreservesLargeStringIds",
+    "endpoint": "home",
+    "input": {
+      "code": 0,
+      "data": {
+        "item": [
+          {
+            "id": "900719925474099312345",
+            "bvid": "BV1",
+            "cid": "900719925474099312345",
+            "title": "title",
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 1,
+              "like": 2
+            }
+          },
+          {
+            "id": 0,
+            "goto": "login_card"
+          },
+          {
+            "id": "0",
+            "goto": "ad",
+            "owner": {
+              "name": ""
+            }
+          }
+        ]
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "searchEmptyPage",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "result": []
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "searchMissingResult",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "numResults": 1,
+        "page": 1
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.result"
+  },
+  {
+    "name": "searchWrongTitle",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "result": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "title": false,
+            "author": "owner",
+            "duration": "1:23",
+            "play": 1
+          }
+        ],
+        "numResults": 1,
+        "page": 1
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.result[0].title"
+  },
+  {
+    "name": "searchWrongDuration",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "result": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "title": "<em>title</em>",
+            "author": "owner",
+            "duration": {},
+            "play": 1
+          }
+        ],
+        "numResults": 1,
+        "page": 1
+      }
+    },
+    "ok": false,
+    "code": "UNION_MISMATCH",
+    "path": "$.data.result[0].duration"
+  },
+  {
+    "name": "searchWrongCount",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "result": [
+          {
+            "id": 1,
+            "bvid": "BV1",
+            "title": "<em>title</em>",
+            "author": "owner",
+            "duration": "1:23",
+            "play": "1"
+          }
+        ],
+        "numResults": 1,
+        "page": 1
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.result[0].play"
+  },
+  {
+    "name": "searchMissingBvid",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "result": [
+          {
+            "id": 1,
+            "title": "<em>title</em>",
+            "author": "owner",
+            "duration": "1:23",
+            "play": 1
+          }
+        ],
+        "numResults": 1,
+        "page": 1
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.result[0].bvid"
+  },
+  {
+    "name": "searchInvalidId",
+    "endpoint": "videoSearch",
+    "input": {
+      "code": 0,
+      "data": {
+        "result": [
+          {
+            "id": -1,
+            "bvid": "BV1",
+            "title": "<em>title</em>",
+            "author": "owner",
+            "duration": "1:23",
+            "play": 1
+          }
+        ],
+        "numResults": 1,
+        "page": 1
+      }
+    },
+    "ok": false,
+    "code": "INVALID_VALUE",
+    "path": "$.data.result[0].id"
+  },
+  {
+    "name": "cidMissingField",
+    "endpoint": "cid",
+    "input": {
+      "code": 0,
+      "data": {
+        "bvid": "BV1"
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.cid"
+  },
+  {
+    "name": "cidWrongType",
+    "endpoint": "cid",
+    "input": {
+      "code": 0,
+      "data": {
+        "cid": false,
+        "bvid": "BV1"
+      }
+    },
+    "ok": false,
+    "code": "UNION_MISMATCH",
+    "path": "$.data.cid"
+  },
+  {
+    "name": "cidMismatch",
+    "endpoint": "cid",
+    "input": {
+      "code": 0,
+      "data": {
+        "cid": 2,
+        "bvid": "BVother"
+      }
+    },
+    "ok": false,
+    "code": "ID_MISMATCH",
+    "path": "$.data.bvid"
+  },
+  {
+    "name": "cidInvalidValue",
+    "endpoint": "cid",
+    "input": {
+      "code": 0,
+      "data": {
+        "cid": 0,
+        "bvid": "BV1"
+      }
+    },
+    "ok": false,
+    "code": "INVALID_VALUE",
+    "path": "$.data.cid"
+  },
+  {
+    "name": "detailMissingView",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "Related": [
+          {
+            "title": "related",
+            "bvid": "BV2",
+            "pic": "pic",
+            "duration": 30,
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 9
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.View"
+  },
+  {
+    "name": "detailWrongOwner",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BV1",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": null,
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": 3,
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": [
+          {
+            "title": "related",
+            "bvid": "BV2",
+            "pic": "pic",
+            "duration": 30,
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 9
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "NULL_NOT_ALLOWED",
+    "path": "$.data.View.owner"
+  },
+  {
+    "name": "detailWrongStat",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BV1",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": {
+            "name": "owner",
+            "face": "https://example.com/face"
+          },
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": "1",
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": [
+          {
+            "title": "related",
+            "bvid": "BV2",
+            "pic": "pic",
+            "duration": 30,
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 9
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.View.stat.coin"
+  },
+  {
+    "name": "detailWrongRelated",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BV1",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": {
+            "name": "owner",
+            "face": "https://example.com/face"
+          },
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": 3,
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": {}
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.Related"
+  },
+  {
+    "name": "detailRelatedNestedWrong",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BV1",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": {
+            "name": "owner",
+            "face": false
+          },
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": 3,
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": [
+          {
+            "title": "related",
+            "bvid": "BV2",
+            "pic": "pic",
+            "duration": 30,
+            "owner": {
+              "name": "owner",
+              "face": false
+            },
+            "stat": {
+              "view": 9
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.Related[0].owner.face"
+  },
+  {
+    "name": "detailRelatedNullItem",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BV1",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": {
+            "name": "owner",
+            "face": "https://example.com/face"
+          },
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": 3,
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": [
+          null
+        ]
+      }
+    },
+    "ok": false,
+    "code": "NULL_NOT_ALLOWED",
+    "path": "$.data.Related[0]"
+  },
+  {
+    "name": "detailMismatch",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BVother",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": {
+            "name": "owner",
+            "face": "https://example.com/face"
+          },
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": 3,
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": [
+          {
+            "title": "related",
+            "bvid": "BV2",
+            "pic": "pic",
+            "duration": 30,
+            "owner": {
+              "name": "owner",
+              "face": "https://example.com/face"
+            },
+            "stat": {
+              "view": 9
+            }
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "ID_MISMATCH",
+    "path": "$.data.View.bvid"
+  },
+  {
+    "name": "detailNullableRelated",
+    "endpoint": "videoDetail",
+    "input": {
+      "code": 0,
+      "data": {
+        "View": {
+          "aid": 1,
+          "bvid": "BV1",
+          "cid": 2,
+          "title": "title",
+          "desc": "desc",
+          "owner": {
+            "name": "owner",
+            "face": "https://example.com/face"
+          },
+          "stat": {
+            "view": 1,
+            "like": 2,
+            "coin": 3,
+            "favorite": 4,
+            "share": 5
+          },
+          "pic": "https://example.com/pic",
+          "pubdate": 1,
+          "duration": 60
+        },
+        "Related": null
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "playMissingDurl",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.durl"
+  },
+  {
+    "name": "playWrongSegmentArray",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": {},
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.durl"
+  },
+  {
+    "name": "playWrongSegmentObject",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          false
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.durl[0]"
+  },
+  {
+    "name": "playWrongPrimary",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          {
+            "url": 1,
+            "backup_url": [
+              "https://example.com/backup"
+            ]
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.durl[0].url"
+  },
+  {
+    "name": "playWrongBackupArray",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          {
+            "url": "https://example.com/main",
+            "backup_url": {}
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.durl[0].backup_url"
+  },
+  {
+    "name": "playWrongBackupItem",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          {
+            "url": "https://example.com/main",
+            "backup_url": [
+              1
+            ]
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.durl[0].backup_url[0]"
+  },
+  {
+    "name": "playWrongAcceptDescription",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          {
+            "url": "https://example.com/main",
+            "backup_url": [
+              "https://example.com/backup"
+            ]
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          16
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.accept_description[0]"
+  },
+  {
+    "name": "playWrongAcceptQuality",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          {
+            "url": "https://example.com/main",
+            "backup_url": [
+              "https://example.com/backup"
+            ]
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          "16"
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.accept_quality[0]"
+  },
+  {
+    "name": "playWrongFormatDescription",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 1234,
+        "durl": [
+          {
+            "url": "https://example.com/main",
+            "backup_url": [
+              "https://example.com/backup"
+            ]
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": 1,
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.support_formats[0].display_desc"
+  },
+  {
+    "name": "playNegativeDuration",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": -1,
+        "durl": [
+          {
+            "url": "https://example.com/main",
+            "backup_url": [
+              "https://example.com/backup"
+            ]
+          }
+        ],
+        "support_formats": [
+          {
+            "display_desc": "流畅",
+            "codecs": null
+          }
+        ],
+        "accept_description": [
+          "流畅"
+        ],
+        "accept_quality": [
+          16
+        ]
+      }
+    },
+    "ok": false,
+    "code": "OUT_OF_RANGE",
+    "path": "$.data.timelength"
+  },
+  {
+    "name": "playEmptySegments",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 0,
+        "durl": []
+      }
+    },
+    "ok": false,
+    "code": "NO_PLAYABLE_URL",
+    "path": "$.data.durl"
+  },
+  {
+    "name": "playOnlyEmptyURLs",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 0,
+        "durl": [
+          {
+            "url": " ",
+            "backup_url": [
+              "",
+              " "
+            ]
+          }
+        ]
+      }
+    },
+    "ok": false,
+    "code": "NO_PLAYABLE_URL",
+    "path": "$.data.durl"
+  },
+  {
+    "name": "playBackupOnly",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 0,
+        "durl": [
+          {
+            "url": null,
+            "backup_url": [
+              "",
+              "https://example.com/b"
+            ]
+          }
+        ]
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "playNullFormats",
+    "endpoint": "playback",
+    "input": {
+      "code": 0,
+      "data": {
+        "format": "mp4",
+        "timelength": 0,
+        "durl": [
+          {
+            "url": "https://example.com/a"
+          }
+        ],
+        "support_formats": null
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "navWrongLoginType",
+    "endpoint": "nav",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": "true",
+        "mid": 1,
+        "uname": "u",
+        "face": "https://example.com/a",
+        "money": 3.5,
+        "wallet": {
+          "bcoin_balance": 2.5
+        },
+        "level_info": {
+          "current_level": 3,
+          "current_exp": 123,
+          "next_exp": "--"
+        }
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.isLogin"
+  },
+  {
+    "name": "navMissingAuthenticatedMid",
+    "endpoint": "nav",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": true,
+        "uname": "u",
+        "face": "https://example.com/a",
+        "money": 3.5,
+        "wallet": {
+          "bcoin_balance": 2.5
+        },
+        "level_info": {
+          "current_level": 3,
+          "current_exp": 123,
+          "next_exp": "--"
+        }
+      }
+    },
+    "ok": false,
+    "code": "MISSING_FIELD",
+    "path": "$.data.mid"
+  },
+  {
+    "name": "navWrongWallet",
+    "endpoint": "nav",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": true,
+        "mid": 1,
+        "uname": "u",
+        "face": "https://example.com/a",
+        "money": 3.5,
+        "wallet": {
+          "bcoin_balance": "1"
+        },
+        "level_info": {
+          "current_level": 3,
+          "current_exp": 123,
+          "next_exp": "--"
+        }
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.wallet.bcoin_balance"
+  },
+  {
+    "name": "navWrongLevel",
+    "endpoint": "nav",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": true,
+        "mid": 1,
+        "uname": "u",
+        "face": "https://example.com/a",
+        "money": 3.5,
+        "wallet": {
+          "bcoin_balance": 2.5
+        },
+        "level_info": {
+          "current_level": 3,
+          "current_exp": false,
+          "next_exp": "--"
+        }
+      }
+    },
+    "ok": false,
+    "code": "TYPE_MISMATCH",
+    "path": "$.data.level_info.current_exp"
+  },
+  {
+    "name": "navFalseIsLogin",
+    "endpoint": "nav",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": false
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "navNullWalletAndLevel",
+    "endpoint": "nav",
+    "input": {
+      "code": 0,
+      "data": {
+        "isLogin": true,
+        "mid": 1,
+        "wallet": null,
+        "level_info": null
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "navExpiredBusinessCode",
+    "endpoint": "nav",
+    "input": {
+      "code": -101
+    },
+    "ok": false,
+    "code": "BUSINESS_STATUS",
+    "path": "$.code"
+  },
+  {
+    "name": "mediaInvalidJSON",
+    "endpoint": "playback",
+    "input": null,
+    "ok": false,
+    "code": "INVALID_JSON",
+    "path": "$",
+    "text": "<html>blocked</html>"
+  }
+]

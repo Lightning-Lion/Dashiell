@@ -1,0 +1,1 @@
+export const harmonyZhuoYiTongChromiumUA = "Mozilla/5.0 (Phone; OpenHarmony 7.0; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36  ArkWeb/7.0.0.105 Mobile HuaweiBrowser/6.1.7.303"

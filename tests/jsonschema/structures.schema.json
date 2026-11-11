@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "name": "Structures",
+  "models": {
+    "Root": {
+      "type": "object",
+      "required": ["groups", "matrix", "node"],
+      "properties": {
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["metadata"],
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "required": ["labels"],
+                "properties": {
+                  "labels": { "type": "array", "items": { "type": "string" } }
+                }
+              }
+            }
+          }
+        },
+        "matrix": { "type": "array", "items": { "type": "array", "items": { "type": ["string", "number"], "nullable": true } } },
+        "node": { "ref": "Recursive" },
+        "wire.dot[0]": { "type": "string", "outputName": "escaped" }
+      }
+    },
+    "Recursive": {
+      "type": "object",
+      "properties": { "next": { "ref": "Recursive", "nullable": true } }
+    }
+  }
+}

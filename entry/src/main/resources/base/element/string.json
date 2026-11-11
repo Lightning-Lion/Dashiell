@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "腕上RSS"
+    },
+    {
+      "name": "internet_reason",
+      "value": "使用WiFi网络加速加载"
+    }
+  ]
+}

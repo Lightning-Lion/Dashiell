@@ -1,0 +1,1748 @@
+{
+  "schemaVersion": 1,
+  "name": "Bili",
+  "models": {
+    "Envelope": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "SessionResponse": {
+      "type": "object",
+      "required": [
+        "code",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "SessionData"
+        }
+      }
+    },
+    "SessionData": {
+      "type": "object",
+      "required": [
+        "isLogin"
+      ],
+      "properties": {
+        "isLogin": {
+          "type": "boolean"
+        }
+      }
+    },
+    "WbiResponse": {
+      "type": "object",
+      "required": [
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "WbiData"
+        }
+      }
+    },
+    "WbiData": {
+      "type": "object",
+      "required": [
+        "wbi_img"
+      ],
+      "properties": {
+        "wbi_img": {
+          "ref": "WbiImage"
+        }
+      }
+    },
+    "WbiImage": {
+      "type": "object",
+      "required": [
+        "img_url",
+        "sub_url"
+      ],
+      "properties": {
+        "img_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sub_url": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "UPVideosResponse": {
+      "type": "object",
+      "required": [
+        "code",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "ref": "UPVideosData"
+        }
+      }
+    },
+    "UPVideosData": {
+      "type": "object",
+      "required": [
+        "list"
+      ],
+      "properties": {
+        "list": {
+          "ref": "UPVideosList"
+        }
+      }
+    },
+    "UPVideosList": {
+      "type": "object",
+      "required": [
+        "vlist"
+      ],
+      "properties": {
+        "vlist": {
+          "type": "array",
+          "items": {
+            "ref": "UPVideo"
+          }
+        }
+      }
+    },
+    "UPVideo": {
+      "type": "object",
+      "required": [
+        "aid",
+        "bvid",
+        "title",
+        "pic",
+        "author"
+      ],
+      "properties": {
+        "aid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "bvid": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "pic": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        }
+      }
+    },
+    "FavoriteFolder": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "attr",
+        "media_count"
+      ],
+      "properties": {
+        "id": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "title": {
+          "type": "string"
+        },
+        "attr": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "media_count": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "fav_state": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "intro": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "string"
+        }
+      }
+    },
+    "FavoriteFoldersResponse": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "ref": "FavoriteFoldersData",
+          "nullable": true
+        }
+      }
+    },
+    "FavoriteFoldersData": {
+      "type": "object",
+      "required": [
+        "count"
+      ],
+      "properties": {
+        "count": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "ref": "FavoriteFolder"
+          },
+          "nullable": true
+        }
+      }
+    },
+    "FavoriteContentsResponse": {
+      "type": "object",
+      "required": [
+        "code",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "ref": "FavoriteContentsData"
+        }
+      }
+    },
+    "FavoriteContentsData": {
+      "type": "object",
+      "required": [
+        "info",
+        "has_more"
+      ],
+      "properties": {
+        "info": {
+          "ref": "FavoriteFolder"
+        },
+        "medias": {
+          "type": "array",
+          "items": {
+            "ref": "FavoriteMedia"
+          },
+          "nullable": true
+        },
+        "has_more": {
+          "type": "boolean"
+        }
+      }
+    },
+    "FavoriteMedia": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "title",
+        "cover",
+        "attr",
+        "duration"
+      ],
+      "properties": {
+        "id": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "type": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "title": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "string"
+        },
+        "attr": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "bvid": {
+          "type": "string"
+        },
+        "bv_id": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "upper": {
+          "ref": "FavoriteUpper"
+        },
+        "cnt_info": {
+          "ref": "FavoriteCounts"
+        }
+      }
+    },
+    "FavoriteUpper": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "FavoriteCounts": {
+      "type": "object",
+      "required": [
+        "play"
+      ],
+      "properties": {
+        "play": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      }
+    },
+    "FavoriteFolderResponse": {
+      "type": "object",
+      "required": [
+        "code",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "ref": "FavoriteFolder"
+        }
+      }
+    },
+    "FavoriteStateResponse": {
+      "type": "object",
+      "required": [
+        "code",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "FavoriteState"
+        }
+      }
+    },
+    "FavoriteState": {
+      "type": "object",
+      "required": [
+        "favoured"
+      ],
+      "properties": {
+        "favoured": {
+          "type": "boolean"
+        }
+      }
+    },
+    "MidResponse": {
+      "type": "object",
+      "required": [
+        "code",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "ref": "MidData"
+        }
+      }
+    },
+    "MidData": {
+      "type": "object",
+      "required": [
+        "mid"
+      ],
+      "properties": {
+        "mid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      }
+    },
+    "HistoryResponse": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "HistoryData",
+          "nullable": true
+        }
+      }
+    },
+    "HistoryData": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "cursor": {
+          "ref": "HistoryCursor",
+          "nullable": true
+        },
+        "tab": {
+          "type": "array",
+          "items": {
+            "ref": "HistoryTab"
+          },
+          "nullable": true
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "ref": "HistoryItem"
+          },
+          "nullable": true
+        }
+      }
+    },
+    "HistoryCursor": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "max": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "view_at": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "business": {
+          "type": "string"
+        }
+      }
+    },
+    "HistoryTab": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "HistoryItem": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "long_title": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string"
+        },
+        "author_name": {
+          "type": "string"
+        },
+        "author_face": {
+          "type": "string"
+        },
+        "badge": {
+          "type": "string"
+        },
+        "show_title": {
+          "type": "string"
+        },
+        "tag_name": {
+          "type": "string"
+        },
+        "business": {
+          "type": "string"
+        },
+        "videos": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "author_mid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "view_at": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "progress": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "duration": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "is_finish": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "is_fav": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "kid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "live_status": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "history": {
+          "ref": "HistoryItemHistory",
+          "nullable": true
+        }
+      }
+    },
+    "HistoryItemHistory": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "oid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "epid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "bvid": {
+          "type": "string"
+        },
+        "page": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "cid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "part": {
+          "type": "string"
+        },
+        "business": {
+          "type": "string"
+        }
+      }
+    },
+    "HotSearchContainer": {
+      "type": "object",
+      "required": [
+        "code",
+        "data"
+      ],
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "HotSearchData"
+        }
+      }
+    },
+    "HotSearchData": {
+      "type": "object",
+      "required": [
+        "trending"
+      ],
+      "properties": {
+        "trending": {
+          "ref": "HotSearchTrending"
+        }
+      }
+    },
+    "HotSearchTrending": {
+      "type": "object",
+      "required": [],
+      "properties": {}
+    },
+    "HotSearchKeyword": {
+      "type": "object",
+      "required": [
+        "keyword"
+      ],
+      "properties": {
+        "keyword": {
+          "type": "string"
+        }
+      }
+    },
+    "HotSearchDisplay": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "show_name": {
+          "type": "string"
+        }
+      }
+    },
+    "ActionResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "LikeStateResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "CoinStateResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "CoinState"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "CoinState": {
+      "type": "object",
+      "properties": {
+        "multiply": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": [
+        "multiply"
+      ]
+    },
+    "InsertCoinResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "InsertCoinData"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "InsertCoinData": {
+      "type": "object",
+      "properties": {
+        "like": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "like"
+      ]
+    },
+    "UserStatResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "UserStat"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "UserStat": {
+      "type": "object",
+      "properties": {
+        "following": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "follower": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "dynamic_count": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": []
+    },
+    "UserCardResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "UserCardData"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "UserCardData": {
+      "type": "object",
+      "properties": {
+        "card": {
+          "ref": "UserCardSummary"
+        },
+        "following": {
+          "type": "boolean"
+        },
+        "follower": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": []
+    },
+    "UserCardSummary": {
+      "type": "object",
+      "properties": {
+        "following": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "follower": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": []
+    },
+    "UserCoinResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "UserCoinData"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "UserCoinData": {
+      "type": "object",
+      "properties": {
+        "money": {
+          "type": "number"
+        }
+      },
+      "required": []
+    },
+    "FollowingResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "FollowingData"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "FollowingData": {
+      "type": "object",
+      "properties": {
+        "list": {
+          "type": "array",
+          "items": {
+            "ref": "FollowingItem"
+          }
+        },
+        "total": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": []
+    },
+    "FollowingItem": {
+      "type": "object",
+      "properties": {
+        "mid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "uname": {
+          "type": "string"
+        },
+        "face": {
+          "type": "string"
+        },
+        "sign": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "mid"
+      ]
+    },
+    "HomeResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "HomeData"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "HomeData": {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "array",
+          "items": {
+            "ref": "HomeItem"
+          }
+        }
+      },
+      "required": [
+        "item"
+      ]
+    },
+    "HomeItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "integer": true,
+          "safeInteger": true,
+          "minLength": 1
+        },
+        "cid": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "integer": true,
+          "safeInteger": true,
+          "minLength": 1
+        },
+        "bvid": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "goto": {
+          "type": "string"
+        },
+        "pic": {
+          "type": "string",
+          "nullable": true
+        },
+        "duration": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "owner": {
+          "ref": "HomeOwner",
+          "nullable": true
+        },
+        "stat": {
+          "ref": "HomeStat",
+          "nullable": true
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "HomeOwner": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "face": {
+          "type": "string",
+          "nullable": true
+        }
+      },
+      "required": []
+    },
+    "HomeStat": {
+      "type": "object",
+      "properties": {
+        "view": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "like": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": []
+    },
+    "SearchResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "SearchData"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "SearchData": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "array",
+          "items": {
+            "ref": "SearchVideo"
+          }
+        },
+        "numResults": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "numPages": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "page": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": [
+        "result"
+      ]
+    },
+    "SearchVideo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "integer": true,
+          "safeInteger": true,
+          "minLength": 1
+        },
+        "bvid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string"
+        },
+        "pic": {
+          "type": "string",
+          "nullable": true
+        },
+        "author": {
+          "type": "string",
+          "nullable": true
+        },
+        "upic": {
+          "type": "string",
+          "nullable": true
+        },
+        "play": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "like": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "duration": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "nullable": true,
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": [
+        "id",
+        "bvid",
+        "title"
+      ]
+    },
+    "CidResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "CidData"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "CidData": {
+      "type": "object",
+      "properties": {
+        "cid": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "integer": true,
+          "safeInteger": true,
+          "minLength": 1
+        },
+        "bvid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "cid"
+      ]
+    },
+    "DetailResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "DetailData"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "DetailData": {
+      "type": "object",
+      "properties": {
+        "View": {
+          "ref": "DetailVideo"
+        },
+        "Related": {
+          "type": "array",
+          "items": {
+            "ref": "RelatedVideo"
+          },
+          "nullable": true
+        }
+      },
+      "required": [
+        "View"
+      ]
+    },
+    "VideoOwner": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "face": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "face"
+      ]
+    },
+    "DetailStat": {
+      "type": "object",
+      "properties": {
+        "view": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "like": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "coin": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "favorite": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "share": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": [
+        "view",
+        "like",
+        "coin",
+        "favorite",
+        "share"
+      ]
+    },
+    "DetailVideo": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "owner": {
+          "ref": "VideoOwner"
+        },
+        "stat": {
+          "ref": "DetailStat"
+        },
+        "pic": {
+          "type": "string"
+        },
+        "pubdate": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "duration": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "cid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "aid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "bvid": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "title",
+        "desc",
+        "owner",
+        "stat",
+        "pic",
+        "pubdate",
+        "duration",
+        "cid",
+        "aid",
+        "bvid"
+      ]
+    },
+    "RelatedVideo": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "pic": {
+          "type": "string"
+        },
+        "owner": {
+          "ref": "VideoOwner"
+        },
+        "stat": {
+          "ref": "RelatedStat"
+        },
+        "duration": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "bvid": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "title",
+        "pic",
+        "owner",
+        "stat",
+        "duration",
+        "bvid"
+      ]
+    },
+    "RelatedStat": {
+      "type": "object",
+      "properties": {
+        "view": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": [
+        "view"
+      ]
+    },
+    "PlaybackResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "PlaybackData"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "PlaybackData": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timelength": {
+          "type": "number"
+        },
+        "durl": {
+          "type": "array",
+          "items": {
+            "ref": "PlaybackSegment"
+          }
+        },
+        "support_formats": {
+          "type": "array",
+          "items": {
+            "ref": "PlaybackFormat"
+          },
+          "nullable": true
+        },
+        "quality": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "accept_format": {
+          "type": "string"
+        },
+        "accept_description": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accept_quality": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "integer": true,
+            "safeInteger": true
+          }
+        },
+        "video_codecid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "play_conf": {
+          "ref": "PlaybackConfig",
+          "nullable": true
+        }
+      },
+      "required": [
+        "format",
+        "timelength",
+        "durl"
+      ]
+    },
+    "PlaybackSegment": {
+      "type": "object",
+      "properties": {
+        "order": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "length": {
+          "type": "number"
+        },
+        "size": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "url": {
+          "type": "string",
+          "nullable": true
+        },
+        "backup_url": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "nullable": true
+        }
+      },
+      "required": []
+    },
+    "PlaybackFormat": {
+      "type": "object",
+      "properties": {
+        "quality": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "format": {
+          "type": "string"
+        },
+        "new_description": {
+          "type": "string"
+        },
+        "display_desc": {
+          "type": "string"
+        },
+        "superscript": {
+          "type": "string"
+        },
+        "codecs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "nullable": true
+        }
+      },
+      "required": []
+    },
+    "PlaybackConfig": {
+      "type": "object",
+      "properties": {
+        "is_new_description": {
+          "type": "boolean"
+        }
+      },
+      "required": []
+    },
+    "NavResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "message": {
+          "type": "string"
+        },
+        "ttl": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "data": {
+          "ref": "NavData"
+        }
+      },
+      "required": [
+        "code",
+        "data"
+      ]
+    },
+    "NavData": {
+      "type": "object",
+      "properties": {
+        "isLogin": {
+          "type": "boolean"
+        },
+        "mid": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "face": {
+          "type": "string"
+        },
+        "uname": {
+          "type": "string"
+        },
+        "money": {
+          "type": "number"
+        },
+        "wallet": {
+          "ref": "NavWallet",
+          "nullable": true
+        },
+        "level_info": {
+          "ref": "NavLevel",
+          "nullable": true
+        }
+      },
+      "required": [
+        "isLogin"
+      ]
+    },
+    "NavWallet": {
+      "type": "object",
+      "properties": {
+        "bcoin_balance": {
+          "type": "number"
+        }
+      },
+      "required": []
+    },
+    "NavLevel": {
+      "type": "object",
+      "properties": {
+        "current_level": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "current_exp": {
+          "type": "number",
+          "integer": true,
+          "safeInteger": true
+        },
+        "next_exp": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "integer": true,
+          "safeInteger": true
+        }
+      },
+      "required": []
+    }
+  }
+}

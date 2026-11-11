@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "name": "appCreate",
+      "tag": "App",
+      "level": "INFO",
+      "zh": "应用启动",
+      "en": "app created",
+      "error": false,
+      "fields": [
+        { "name": "version", "type": "string", "zh": "版本", "en": "version" },
+        { "name": "debug", "type": "boolean", "zh": "调试构建", "en": "debug build" },
+        { "name": "device", "type": "string", "zh": "设备", "en": "device" },
+        { "name": "api", "type": "number", "zh": "系统 API", "en": "system api" },
+        { "name": "session", "type": "string", "zh": "会话", "en": "session" }
+      ]
+    },
+    {
+      "name": "colorModeFailed",
+      "tag": "App",
+      "level": "ERROR",
+      "zh": "设置深色模式失败",
+      "en": "failed to set dark color mode"
+    },
+    {
+      "name": "appForeground",
+      "tag": "App",
+      "level": "INFO",
+      "zh": "应用进入前台",
+      "en": "app foreground",
+      "error": false
+    },
+    {
+      "name": "appBackground",
+      "tag": "App",
+      "level": "INFO",
+      "zh": "应用进入后台",
+      "en": "app background",
+      "error": false
+    },
+    {
+      "name": "appDestroy",
+      "tag": "App",
+      "level": "INFO",
+      "zh": "应用销毁",
+      "en": "app destroyed",
+      "error": false
+    },
+    {
+      "name": "windowStageCreate",
+      "tag": "App",
+      "level": "INFO",
+      "zh": "窗口舞台创建",
+      "en": "window stage created",
+      "error": false
+    },
+    {
+      "name": "windowStageDestroy",
+      "tag": "App",
+      "level": "INFO",
+      "zh": "窗口舞台销毁",
+      "en": "window stage destroyed",
+      "error": false
+    },
+    {
+      "name": "loadContentOk",
+      "tag": "App",
+      "level": "INFO",
+      "zh": "根页面加载完成",
+      "en": "root page loaded",
+      "error": false,
+      "fields": [
+        { "name": "page", "type": "string", "zh": "页面", "en": "page" }
+      ]
+    },
+    {
+      "name": "loadContentFailed",
+      "tag": "App",
+      "level": "ERROR",
+      "zh": "加载根页面失败",
+      "en": "failed to load root page",
+      "fields": [
+        { "name": "page", "type": "string", "zh": "页面", "en": "page" }
+      ]
+    },
+    {
+      "name": "dbOpenOk",
+      "tag": "Db",
+      "level": "INFO",
+      "zh": "数据库打开完成",
+      "en": "database opened",
+      "error": false,
+      "fields": [
+        { "name": "version", "type": "number", "zh": "schema 版本", "en": "schema version" }
+      ]
+    },
+    {
+      "name": "dbOpenFailed",
+      "tag": "Db",
+      "level": "ERROR",
+      "zh": "数据库打开失败",
+      "en": "failed to open database"
+    },
+    {
+      "name": "dbSchemaReset",
+      "tag": "Db",
+      "level": "WARN",
+      "zh": "重建预发布数据库",
+      "en": "resetting pre-release database",
+      "error": false,
+      "fields": [
+        { "name": "from", "type": "number", "zh": "旧版本", "en": "from version" },
+        { "name": "to", "type": "number", "zh": "新版本", "en": "to version" }
+      ]
+    },
+    {
+      "name": "dbMigrationIncomplete",
+      "tag": "Db",
+      "level": "WARN",
+      "zh": "旧数据迁移未完成",
+      "en": "legacy migration incomplete",
+      "error": false,
+      "fields": [
+        { "name": "reason", "type": "string", "zh": "原因", "en": "reason" }
+      ]
+    },
+    {
+      "name": "dbMigrationFailed",
+      "tag": "Db",
+      "level": "ERROR",
+      "zh": "旧数据迁移异常",
+      "en": "legacy migration failed"
+    },
+    {
+      "name": "biliRequestDone",
+      "tag": "Api",
+      "level": "DEBUG",
+      "zh": "哔哩哔哩请求完成",
+      "en": "bilibili request completed",
+      "error": false,
+      "fields": [
+        { "name": "endpoint", "type": "string", "zh": "端点", "en": "endpoint" },
+        { "name": "method", "type": "string", "zh": "方法", "en": "method" },
+        { "name": "status", "type": "number", "zh": "HTTP 状态", "en": "http status" },
+        { "name": "elapsedMs", "type": "number", "zh": "耗时", "en": "elapsed ms" }
+      ]
+    },
+    {
+      "name": "biliRequestFailed",
+      "tag": "Api",
+      "level": "WARN",
+      "zh": "哔哩哔哩请求失败",
+      "en": "bilibili request failed",
+      "fields": [
+        { "name": "endpoint", "type": "string", "zh": "端点", "en": "endpoint" },
+        { "name": "method", "type": "string", "zh": "方法", "en": "method" }
+      ]
+    },
+    {
+      "name": "biliSessionRestored",
+      "tag": "Auth",
+      "level": "INFO",
+      "zh": "哔哩哔哩登录态已恢复",
+      "en": "bilibili session restored",
+      "error": false
+    },
+    {
+      "name": "biliSessionExpired",
+      "tag": "Auth",
+      "level": "DEBUG",
+      "zh": "哔哩哔哩登录态已失效",
+      "en": "bilibili session expired",
+      "error": false
+    },
+    {
+      "name": "biliLoginSucceeded",
+      "tag": "Auth",
+      "level": "INFO",
+      "zh": "哔哩哔哩登录成功",
+      "en": "bilibili login succeeded",
+      "error": false
+    },
+    {
+      "name": "biliLoginFailed",
+      "tag": "Auth",
+      "level": "WARN",
+      "zh": "哔哩哔哩登录验证失败",
+      "en": "bilibili login verification failed"
+    },
+    {
+      "name": "cookieImportDone",
+      "tag": "Auth",
+      "level": "INFO",
+      "zh": "抖音 Cookie 导入结束",
+      "en": "douyin cookie import finished",
+      "error": false,
+      "fields": [
+        { "name": "ok", "type": "boolean", "zh": "成功", "en": "ok" },
+        { "name": "reason", "type": "string", "zh": "原因", "en": "reason" },
+        { "name": "kept", "type": "number", "zh": "保留条数", "en": "kept" },
+        { "name": "saved", "type": "boolean", "zh": "WebView 保存", "en": "webview saved" },
+        { "name": "domains", "type": "number", "zh": "域名数", "en": "domain count" }
+      ]
+    },
+    {
+      "name": "biliDecodeFailed",
+      "tag": "Json",
+      "level": "WARN",
+      "zh": "哔哩哔哩响应解码失败",
+      "en": "bilibili response decode failed",
+      "error": false,
+      "fields": [
+        { "name": "operation", "type": "string", "zh": "操作", "en": "operation" },
+        { "name": "schema", "type": "string", "zh": "Schema", "en": "schema" },
+        { "name": "issueCount", "type": "number", "zh": "问题数", "en": "issue count" },
+        { "name": "code", "type": "string", "zh": "首个问题码", "en": "first issue code" },
+        { "name": "path", "type": "string", "zh": "路径", "en": "path" },
+        { "name": "expected", "type": "string", "zh": "期望", "en": "expected" },
+        { "name": "actualType", "type": "string", "zh": "实际类型", "en": "actual type" }
+      ]
+    },
+    {
+      "name": "douyinDecodeFailed",
+      "class": "DouyinNativeFeed",
+      "tag": "Json",
+      "level": "WARN",
+      "zh": "抖音响应解码失败",
+      "en": "douyin response decode failed",
+      "error": false,
+      "fields": [
+        { "name": "operation", "type": "string", "zh": "操作", "en": "operation" },
+        { "name": "schema", "type": "string", "zh": "Schema", "en": "schema" },
+        { "name": "issueCount", "type": "number", "zh": "问题数", "en": "issue count" },
+        { "name": "code", "type": "string", "zh": "首个问题码", "en": "first issue code" },
+        { "name": "path", "type": "string", "zh": "路径", "en": "path" },
+        { "name": "expected", "type": "string", "zh": "期望", "en": "expected" },
+        { "name": "actualType", "type": "string", "zh": "实际类型", "en": "actual type" }
+      ]
+    },
+    {
+      "name": "zhihuDecodeFailed",
+      "class": "NativeArticlePage",
+      "tag": "Json",
+      "level": "WARN",
+      "zh": "知乎数据解码失败",
+      "en": "zhihu payload decode failed",
+      "error": false,
+      "fields": [
+        { "name": "operation", "type": "string", "zh": "操作", "en": "operation" },
+        { "name": "schema", "type": "string", "zh": "Schema", "en": "schema" },
+        { "name": "issueCount", "type": "number", "zh": "问题数", "en": "issue count" },
+        { "name": "code", "type": "string", "zh": "首个问题码", "en": "first issue code" },
+        { "name": "path", "type": "string", "zh": "路径", "en": "path" },
+        { "name": "expected", "type": "string", "zh": "期望", "en": "expected" },
+        { "name": "actualType", "type": "string", "zh": "实际类型", "en": "actual type" }
+      ]
+    },
+    {
+      "name": "localDecodeFailed",
+      "tag": "Json",
+      "level": "WARN",
+      "zh": "本地数据解码失败",
+      "en": "local payload decode failed",
+      "error": false,
+      "fields": [
+        { "name": "operation", "type": "string", "zh": "操作", "en": "operation" },
+        { "name": "schema", "type": "string", "zh": "Schema", "en": "schema" },
+        { "name": "issueCount", "type": "number", "zh": "问题数", "en": "issue count" },
+        { "name": "code", "type": "string", "zh": "首个问题码", "en": "first issue code" },
+        { "name": "path", "type": "string", "zh": "路径", "en": "path" },
+        { "name": "expected", "type": "string", "zh": "期望", "en": "expected" },
+        { "name": "actualType", "type": "string", "zh": "实际类型", "en": "actual type" }
+      ]
+    },
+    {
+      "name": "biliHotSearchSkipped",
+      "tag": "Bili",
+      "level": "WARN",
+      "zh": "热搜部分条目被跳过",
+      "en": "bilibili hot search items skipped",
+      "error": false,
+      "fields": [
+        { "name": "received", "type": "number", "zh": "收到", "en": "received" },
+        { "name": "skipped", "type": "number", "zh": "跳过", "en": "skipped" },
+        { "name": "firstCode", "type": "string", "zh": "首个问题码", "en": "first issue code" },
+        { "name": "firstPath", "type": "string", "zh": "首个路径", "en": "first path" }
+      ]
+    },
+    {
+      "name": "douyinRequestDone",
+      "tag": "Api",
+      "level": "DEBUG",
+      "zh": "抖音请求完成",
+      "en": "douyin request completed",
+      "error": false,
+      "fields": [
+        { "name": "path", "type": "string", "zh": "路径", "en": "path" },
+        { "name": "method", "type": "string", "zh": "方法", "en": "method" },
+        { "name": "status", "type": "number", "zh": "HTTP 状态", "en": "http status" },
+        { "name": "elapsedMs", "type": "number", "zh": "耗时", "en": "elapsed ms" }
+      ]
+    },
+    {
+      "name": "douyinRequestFailed",
+      "tag": "Api",
+      "level": "WARN",
+      "zh": "抖音请求失败",
+      "en": "douyin request failed",
+      "fields": [
+        { "name": "path", "type": "string", "zh": "路径", "en": "path" },
+        { "name": "method", "type": "string", "zh": "方法", "en": "method" }
+      ]
+    },
+    {
+      "name": "rssListFetchDone",
+      "class": "ReadingSourcePage",
+      "tag": "Rss",
+      "level": "DEBUG",
+      "zh": "资讯列表加载完成",
+      "en": "rss list loaded",
+      "error": false,
+      "fields": [
+        { "name": "count", "type": "number", "zh": "条目数", "en": "item count" },
+        { "name": "elapsedMs", "type": "number", "zh": "耗时", "en": "elapsed ms" },
+        { "name": "cache", "type": "boolean", "zh": "来自缓存", "en": "from cache" }
+      ]
+    },
+    {
+      "name": "rssListFetchFailed",
+      "tag": "Rss",
+      "level": "WARN",
+      "zh": "资讯列表加载失败",
+      "en": "rss list load failed",
+      "error": false,
+      "fields": [
+        { "name": "reason", "type": "string", "zh": "原因", "en": "reason" }
+      ]
+    }
+  ]
+}

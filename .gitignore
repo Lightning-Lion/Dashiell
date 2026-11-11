@@ -1,0 +1,57 @@
+# HarmonyOS / DevEco Studio 项目忽略规则
+# 说明：本文件在首次提交前建立；entry/.gitignore 与 tools/json-gen/.gitignore
+# 由 IDE 与 Cargo 各自维护，内容被本文件覆盖，保留不影响生效。
+
+# ---- 依赖与构建产物（均可由 ohpm install / hvigor / cargo 重建）----
+build/
+oh_modules/
+node_modules/
+.preview/
+.test/
+.cxx/
+.hvigor/
+
+# 打包输出：签名与未签名的包一律不入库
+*.hap
+*.app
+*.har
+*.log
+
+# ---- 机器本地配置（含 SDK 绝对路径，换机必然不同）----
+local.properties
+
+# ---- 签名材料（绝不入库；仓库只保留 build-profile.json5 里的注释模板）----
+*.p12
+*.p7b
+*.cer
+*.csr
+*.keystore
+*.jks
+
+# ---- Rust 生成器 ----
+target/
+
+# ---- Python / Node 脚本缓存与工具虚拟环境 ----
+__pycache__/
+*.py[cod]
+.tools-venv/
+
+# 占位素材生成前的原始备份（内含真实二维码与头像），确认无误后直接删除，不要入库
+.media-originals.tar
+
+# ---- 验证脚本的运行产物 ----
+# 这些由 scripts/test-*.mjs、scripts/test-*-device.sh、scripts/audit-json-boundaries.mjs
+# 在每次验证时重新生成，属于输出而非输入；其中可能带本机路径与源文件哈希，不入库。
+docs/abogus/*.log
+docs/abogus/*.json
+docs/abogus/live-run-*/
+docs/jsonschema/*.log
+docs/jsonschema/*.json
+
+# 需要留档的验证结论请写成 Markdown 正文，不要用 .log/.json 原样提交。
+
+# ---- 编辑器与系统 ----
+.idea/
+*.iml
+.vscode/
+.DS_Store

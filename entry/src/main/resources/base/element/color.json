@@ -1,0 +1,56 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#000000"
+    },
+    {
+      "name": "brand_color",
+      "value": "#FF4C63"
+    },
+    {
+      "name": "bili_color",
+      "value": "#EA7A99"
+    },
+    {
+      "name": "font_color_secondary",
+      "value": "#9B9BA0"
+    },
+    {
+      "name": "list_row_background_color",
+      "value": "#262626"
+    },
+    {
+      "name": "retry_button_color",
+      "value": "#FF4C63"
+    },
+    {
+      "name": "landing_page_agree_link_text_color",
+      "value": "#FF4C63"
+    },
+    {
+      "name": "landing_page_cancel_button_background_color",
+      "value": "#2F353B"
+    },
+    {
+      "name": "landing_page_cancel_button_text_color",
+      "value": "#9B9BA0"
+    },
+    {
+      "name": "landing_page_agree_button_background_color",
+      "value": "#FF4C63"
+    },
+    {
+      "name": "TextPrimaryColorInBlackBackground",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "TextSecondaryColorInBlackBackground",
+      "value": "#A9A9A9"
+    },
+    {
+      "name":"DestructiveButtonColor",
+      "value": "#E94C46"
+    }
+  ]
+}

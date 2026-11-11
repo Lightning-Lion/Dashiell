@@ -1,0 +1,16 @@
+{
+  "float": [
+    {
+      "name": "page_text_font_size",
+      "value": "50fp"
+    },
+    {
+      "name": "watch_screen_size_fp",
+      "value": "233fp"
+    },
+    {
+      "name": "watch_screen_size_px",
+      "value": "466px"
+    }
+  ]
+}

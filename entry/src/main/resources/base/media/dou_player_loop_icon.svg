@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 循环模式：单圈顺时针箭头，缺口在右上，箭头指向缺口。抖音这边没有对应资产，按 128 网格新建。 -->
+<svg width="128pt" height="128pt" version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+ <path d="M99.71 77A38 38 0 1 1 93.11 39.57" fill="none" stroke="#FE2C55" stroke-width="10" stroke-linecap="round"/>
+ <path d="M103.39 51.83L86.98 44.72L99.24 34.43Z" fill="#FE2C55"/>
+</svg>

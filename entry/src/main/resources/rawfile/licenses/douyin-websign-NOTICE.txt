@@ -1,0 +1,12 @@
+Douyin_TikTok_Download_API
+Copyright 2021-2026 Evil0ctal and contributors
+
+Licensed under the Apache License, Version 2.0. The full text is in the
+douyin-websign-LICENSE.txt file next to this one.
+
+https://github.com/Evil0ctal/Douyin_TikTok_Download_API
+
+Dashiell adapts the webSign protocol and protected-path table from revision
+4f0bed8483c35a980315d9c7b3a1d4a1119ad2b2 into DouyinWebSign.ets.
+Modifications: synchronous ArkTS implementation, explicit input/size guards,
+immutable output, dependency-free RFC 1321 MD5, and native HTTP integration.

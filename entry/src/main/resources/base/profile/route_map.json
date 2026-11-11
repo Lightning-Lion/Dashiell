@@ -1,0 +1,239 @@
+{
+  "routerMap": [
+    {
+      "name": "BiliFavoriteContentsPage",
+      "pageSourceFile": "src/main/ets/pages/BiliFavorites/BiliFavoritesPage.ets",
+      "buildFunction": "BiliFavoriteContentsPageBuilder"
+    },
+    {
+      "name": "BiliFavoritesPage",
+      "pageSourceFile": "src/main/ets/pages/BiliFavorites/BiliFavoritesPage.ets",
+      "buildFunction": "BiliFavoritesPageBuilder"
+    },
+    {
+      "name": "BiliHistoryPage",
+      "pageSourceFile": "src/main/ets/pages/BiliHistory/BiliHistoryPage.ets",
+      "buildFunction": "BiliHistoryPageBuilder"
+    },
+    {
+      "name": "BiliFollowingPage",
+      "pageSourceFile": "src/main/ets/pages/BiliFollowing/BiliFollowingPage.ets",
+      "buildFunction": "BiliFollowingPageBuilder"
+    },
+    {
+      "name": "BiliHomeFeedPageWithLogin",
+      "pageSourceFile":"src/main/ets/pages/BiliHome/BiliHomeL1A.ets",
+      "buildFunction": "BiliHomeFeedPageWithLoginBuilder"
+    },
+    {
+      "name": "BiliHomeFeedPageWithoutLogin",
+      "pageSourceFile":"src/main/ets/pages/BiliHome/BiliHomeL1B.ets",
+      "buildFunction": "BiliHomeFeedWithoutLoginPageBuilder"
+    },
+    {
+      "name": "AboutPage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/AboutPage.ets",
+      "buildFunction": "AboutPageBuilder"
+    },
+    {
+      "name": "AcknowledgmentsPage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/License.ets",
+      "buildFunction": "AcknowledgmentsPageBuilder"
+    },
+    {
+      "name": "BilibiliApiCollectLicense",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/License.ets",
+      "buildFunction": "BilibiliApiCollectLicensePageBuilder"
+    },
+    {
+      "name": "RSSHubLicense",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/License.ets",
+      "buildFunction": "RSSHubLicensePageBuilder"
+    },
+    {
+      "name": "MaterialIconsLicense",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/License.ets",
+      "buildFunction": "MaterialIconsLicensePageBuilder"
+    },
+    {
+      "name": "ContributorsPage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/Contributors.ets",
+      "buildFunction": "ContributorsPageBuilder"
+    },
+    {
+      "name": "CustomerServicePage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/CustomerServicePage.ets",
+      "buildFunction": "CustomerServicePageBuilder"
+    },
+    {
+      "name": "BiliApiCollectQrPage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/BiliApiCollectQrPage.ets",
+      "buildFunction": "BiliApiCollectQrPageBuilder"
+    },
+    {
+      "name": "BiliApiLicenseQrPage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/BiliApiCollectQrPage.ets",
+      "buildFunction": "BiliApiLicenseQrPageBuilder"
+    },
+    {
+      "name": "PrivacyPolicyPage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/PrivacyPolicyPage.ets",
+      "buildFunction": "PrivacyPolicyPageBuilder"
+    },
+    {
+      "name": "TermOfServicePage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/TermOfServicePage.ets",
+      "buildFunction": "TermOfServicePageBuilder"
+    },
+    {
+      "name": "ShareVideoPage",
+      "pageSourceFile": "src/main/ets/pages/BiliVideoDetailPage/ShareVideoPage.ets",
+      "buildFunction": "ShareVideoPageBuilder"
+    },
+    {
+      "name": "BeianQrPage",
+      "pageSourceFile": "src/main/ets/pages/AboutPage/BeianQrPage.ets",
+      "buildFunction": "BeianQrPageBuilder"
+    },
+    {
+      "name": "BiliLogInOutPage",
+      "pageSourceFile":"src/main/ets/pages/BiliLogout/BiliLogInOutPage.ets",
+      "buildFunction": "BiliLogInOutPageBuilder"
+    },
+    {
+      "name": "BiliLoginRequiredPage",
+      "pageSourceFile": "src/main/ets/pages/BiliLogin/BiliLoginRequiredPage.ets",
+      "buildFunction": "BiliLoginRequiredPageBuilder"
+    },
+    {
+      "name": "BiliVideoDetailPage",
+      "pageSourceFile":"src/main/ets/pages/BiliVideoDetailPage/BiliVideoDetailPage.ets",
+      "buildFunction": "BiliVideoDetailPageBuilder"
+    },
+    {
+      "name": "BiliInsertCoinPage",
+      "pageSourceFile":"src/main/ets/pages/BiliVideoDetailPage/BiliInsertCoinPage.ets",
+      "buildFunction": "BiliInsertCoinPageBuilder"
+    },
+    {
+      "name": "AddToFavoritePage",
+      "pageSourceFile":"src/main/ets/pages/BiliVideoDetailPage/AddToFavoritePage.ets",
+      "buildFunction": "AddToFavoritePageBuilder"
+    },
+    {
+      "name": "BiliVideoPlayerPage",
+      "pageSourceFile": "src/main/ets/pages/BiliVideoPlayer/BiliVideoPlayerPage.ets",
+      "buildFunction": "BiliVideoPlayerPageBuilder"
+    },
+    {
+      "name": "VolumeControlPage",
+      "pageSourceFile": "src/main/ets/pages/BiliVideoPlayer/VolumeControlPage.ets",
+      "buildFunction": "VolumeControlPageBuilder"
+    },
+    {
+      "name": "PersonalizedSettingsPage",
+      "pageSourceFile": "src/main/ets/pages/Settings/PersonalizedSettingsPage.ets",
+      "buildFunction": "PersonalizedSettingsPageBuilder"
+    },
+    {
+      "name": "BiliSearch",
+      "pageSourceFile": "src/main/ets/pages/BiliSearch/BiliSearch.ets",
+      "buildFunction": "BiliSearchBuilder"
+    },
+    {
+      "name": "BiliSearchList",
+      "pageSourceFile": "src/main/ets/pages/BiliSearch/BiliSearchList.ets",
+      "buildFunction": "BiliSearchListBuilder"
+    },
+    {
+      "name": "BiliSearchFilter",
+      "pageSourceFile": "src/main/ets/pages/BiliSearch/BiliSearchFilter.ets",
+      "buildFunction": "BiliSearchFilterBuilder"
+    },
+    {
+      "name": "DouYinLoadingFullScreenCover",
+      "pageSourceFile":"src/main/ets/pages/DouYin/DouYinLoadingFullScreenCover.ets",
+      "buildFunction": "DouYinLoadingFullScreenCoverBuilder"
+    },
+    {
+      "name": "DouYinJingxuanPage",
+      "pageSourceFile":"src/main/ets/pages/DouYin/DouYinJingxuanPage.ets",
+      "buildFunction": "DouYinJingxuanPageBuilder"
+    },
+    {
+      "name": "DouYinMenu",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouYinMenu.ets",
+      "buildFunction": "DouYinMenuBuilder"
+    },
+    {
+      "name": "DouYinLoginPage",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouYinLoginPage.ets",
+      "buildFunction": "DouYinLoginPageBuilder"
+    },
+    {
+      "name": "DouYinLoginRequiredPage",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouYinLoginRequiredPage.ets",
+      "buildFunction": "DouYinLoginRequiredPageBuilder"
+    },
+    {
+      "name": "DouyinNetworkDiagnosePage",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouyinNetworkDiagnosePage.ets",
+      "buildFunction": "DouyinNetworkDiagnosePageBuilder"
+    },
+    {
+      "name": "DouYinAboutPage",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouYinAbout.ets",
+      "buildFunction": "DouYinAboutPageBuilder"
+    },
+    {
+      "name": "ReadingSourcePage",
+      "pageSourceFile": "src/main/ets/pages/RSS/NewsListPage.ets",
+      "buildFunction": "ReadingSourcePageBuilder"
+    },
+    {
+      "name": "NativeArticlePage",
+      "pageSourceFile": "src/main/ets/pages/RSS/NativeArticlePage.ets",
+      "buildFunction": "NativeArticlePageBuilder"
+    },
+    {
+      "name": "ArticleLinkPage",
+      "pageSourceFile": "src/main/ets/pages/RSS/ArticleLinkPage.ets",
+      "buildFunction": "ArticleLinkPageBuilder"
+    },
+    {
+      "name": "ImageViewerPage",
+      "pageSourceFile": "src/main/ets/pages/RSS/ImageViewerPage.ets",
+      "buildFunction": "ImageViewerPageBuilder"
+    },
+    {
+      "name": "FindMoreRSSPage",
+      "pageSourceFile": "src/main/ets/pages/RSS/MoreRSSPage.ets",
+      "buildFunction": "FindMoreRSSPageBuilder"
+    },
+    {
+      "name": "BiliStackWidgetPage",
+      "pageSourceFile": "src/main/ets/pages/BiliHome/BiliStackWidgetPage.ets",
+      "buildFunction": "BiliStackWidgetPageBuilder"
+    },
+    {
+      "name": "IframePlayer",
+      "pageSourceFile": "src/main/ets/pages/BiliVideoPlayer/IframePlayer.ets",
+      "buildFunction": "IframePlayerBuilder"
+    },
+    {
+      "name": "DouyinCollectedPage",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouYinJingxuanPage.ets",
+      "buildFunction": "DouyinCollectedPageBuilder"
+    },
+    {
+      "name": "DouyinLikedPage",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouYinJingxuanPage.ets",
+      "buildFunction": "DouyinLikedPageBuilder"
+    },
+    {
+      "name": "DouyinUifidMintExplainer",
+      "pageSourceFile": "src/main/ets/pages/DouYin/DouyinJingxuanPage.ets",
+      "buildFunction": "DouyinUifidMintExplainerBuilder"
+    }
+  ]
+}

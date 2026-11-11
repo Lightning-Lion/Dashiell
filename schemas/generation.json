@@ -1,0 +1,6 @@
+[
+  { "schema": "schemas/douyin.schema.json", "out": "entry/src/main/ets/common/douyin/schema", "runtimeImport": "../../jsonschema/JsonDecode" },
+  { "schema": "schemas/bili.schema.json", "out": "entry/src/main/ets/common/bili/schema", "runtimeImport": "../../jsonschema/JsonDecode" },
+  { "schema": "schemas/local.schema.json", "out": "entry/src/main/ets/common/local/schema", "runtimeImport": "../../jsonschema/JsonDecode" },
+  { "schema": "tests/jsonschema/structures.schema.json", "out": "entry/src/test/jsonschema/generated", "runtimeImport": "../../../main/ets/common/jsonschema/JsonDecode" }
+]
